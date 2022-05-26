@@ -7,6 +7,6 @@ export class ServicoRealizado {
     cliente!: Cliente;
     servicos: Servico[] = [];
     produtos: Produto[] = [];
-    valorTotalServico!: number;
+    valor!: number;
     dataServicoRealizado: Date = new Date;
 }

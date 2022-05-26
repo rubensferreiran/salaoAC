@@ -43,7 +43,7 @@ export class FormProdutoComponent implements OnInit {
       id: [null],
       nomeProduto: [null, [Validators.required]],
       tipoProduto: [null, [Validators.required]],
-      valorProduto: [null, [Validators.required]]
+      valor: [null, [Validators.required]]
     })
   }
 

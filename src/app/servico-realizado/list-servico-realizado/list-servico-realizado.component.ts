@@ -22,7 +22,6 @@ export class ListServicoRealizadoComponent implements OnInit {
   ngOnInit(): void {
     this.servicoRealizadoService.getAll().subscribe((servicosRealizados: ServicoRealizado[]) => {
       this.servicosRealizados = servicosRealizados
-      console.log(servicosRealizados)
     });
   }
 

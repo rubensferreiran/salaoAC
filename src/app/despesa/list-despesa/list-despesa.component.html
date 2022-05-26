@@ -16,12 +16,12 @@
                     <tr *ngFor="let despesa of despesas">
                         <td><span class="badge text-dark" style="width: 100%; text-align: center;">{{despesa.fornecedor}}</span></td>
                         <td>
-                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{despesa.valorPagoFornecedor | currency}}</span>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{despesa.valor | currency}}</span>
                         </td>
                         <td>
                             <span class="badge text-dark" style="width: 100%; text-align: center;">{{despesa.dataPagamento | date: "dd/MM/YYYY"}}</span>
                         </td>
-                        <td><i style="cursor: pointer;" class="bi bi-trash text-danger"></i></td>
+                        <td><i (click)="removeDespesa(despesa)" style="cursor: pointer;" class="bi bi-trash text-danger"></i></td>
                     </tr>
                 </tbody>
             </table>

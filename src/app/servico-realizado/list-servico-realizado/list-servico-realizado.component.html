@@ -25,7 +25,7 @@
                             <span class="badge text-dark" style="width: 100%; text-align: center;">
                                 <ul style="text-align: left; margin-top: -5px;"
                                     *ngFor="let servico of servicoRealizado.servicos">
-                                    <li style="list-style: none;">{{servico.tipoServico}} | {{servico.valorServico |
+                                    <li style="list-style: none;">{{servico.tipoServico}} | {{servico.valor |
                                         currency}}</li>
                                 </ul>
                             </span>
@@ -34,14 +34,14 @@
                             <span class="badge text-dark" style="width: 100%; text-align: center;">
                                 <ul style="text-align: left; margin-top: -5px;"
                                     *ngFor="let produto of servicoRealizado.produtos">
-                                    <li style="list-style: none;">{{produto.nomeProduto}} | {{produto.valorProduto|
+                                    <li style="list-style: none;">{{produto.nomeProduto}} | {{produto.valor |
                                         currency}}</li>
                                 </ul>
                             </span>
                         </td>
                         <td>
                             <span class="badge text-dark"
-                                style="width: 100%; text-align: center;">{{servicoRealizado.valorTotalServico |
+                                style="width: 100%; text-align: center;">{{servicoRealizado.valor |
                                 currency}}</span>
                         </td>
                         <td>

@@ -11,7 +11,7 @@
         </div>
         <div class="mb-3 col-12 col-md-6">
             <label for="servico" class="form-label">Serviço:</label>
-            <select id="servico" class="form-select input-group" formControlName="servico"
+            <select id="servico" class="form-select" formControlName="servico"
                 [(ngModel)]="servicoSelecionado">
                 <option *ngFor="let servico of servicos" [ngValue]="servico">{{servico.tipoServico}}</option>
             </select>
@@ -21,13 +21,14 @@
                     <tr *ngFor="let servico of servicosUtilizados">
                         <td>
                             <span class="badge text-dark"
-                                style="width: 100%; text-align: center;">{{servico.tipoServico}}</span>
+                                style="width: 100%; text-align: left;">{{servico.tipoServico}}</span>
                         </td>
                         <td>
                             <span class="badge text-dark"
-                                style="width: 100%; text-align: center;">{{servico.valorServico | currency}}</span>
+                                style="width: 100%; text-align: center;">{{servico.valor | currency}}</span>
                         </td>
-                        <td></td>
+                        <td><i (click)="deletarServico()" style="cursor: pointer;"
+                            class="bi bi-trash text-danger"></i></td>
                     </tr>
                 </tbody>
             </table>
@@ -44,20 +45,21 @@
                     <tr *ngFor="let produto of produtosUltilizados">
                         <td>
                             <span class="badge text-dark"
-                                style="width: 100%; text-align: center;">{{produto.nomeProduto}}</span>
+                                style="width: 100%; text-align: left;">{{produto.nomeProduto}} - {{produto.tipoProduto}}</span>
                         </td>
                         <td>
                             <span class="badge text-dark"
-                                style="width: 100%; text-align: center;">{{produto.valorProduto | currency}}</span>
+                                style="width: 100%; text-align: center;">{{produto.valor | currency}}</span>
                         </td>
-                        <td></td>
+                        <td><i (click)="deletatProduto()" style="cursor: pointer;"
+                            class="bi bi-trash text-danger"></i></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="mb-3 col-12 col-md-6">
-            <label for="valorTotalServico" class="form-label">Valor Total:</label>
-            <input type="text" class="form-control" id="valorTotalServico" formControlName="valorTotalServico">
+            <label for="valor" class="form-label">Valor Total:</label>
+            <input type="text" class="form-control" id="valor" formControlName="valor" [value]="calcularProdutosServicos() | currency">
         </div>
         <div class="mb-3 col-12 col-md-6">
             <label for="dataServicoRealizado" class="form-label">Data:</label>
@@ -69,3 +71,10 @@
         </div>
     </form>
 </div>
+
+
+
+  <!-- somaTotal(){
+    const todos = (this.produtosUltilizados.reduce((produto, valor) => produto += valor.valorProduto, 0) + this.servicosUtilizados.reduce((produto, valor) => produto += valor.valorServico, 0));
+    return todos;
+  } -->

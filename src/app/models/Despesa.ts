@@ -1,6 +1,6 @@
 export class Despesa {
     id!: number;
     fornecedor!: string;
-    valorPagoFornecedor!: number;
+    valor!: number;
     dataPagamento: Date = new Date();
 }

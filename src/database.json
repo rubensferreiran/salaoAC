@@ -30,42 +30,72 @@
   "produto": [
     {
       "id": 1,
-      "nomeProduto": "Inoar ",
-      "tipoProduto": "Shampoo",
-      "valorProduto": "79.99"
+      "nomeProduto": "wella",
+      "tipoProduto": "Shampoo - 500ml",
+      "valor": 199
     },
     {
       "id": 2,
-      "nomeProduto": "Inoar",
-      "tipoProduto": "Condicionador - 300ml",
-      "valorProduto": "69.90"
+      "nomeProduto": "wella",
+      "tipoProduto": "condicionador - 500ml",
+      "valor": "78.99"
     }
   ],
   "servico": [
     {
       "id": 1,
-      "tipoServico": "Escova - Cabelo - Curto",
-      "valorServico": "35.00"
+      "tipoServico": "escova - cabelo(curto)",
+      "valor": 20
     },
     {
       "id": 2,
-      "tipoServico": "Selagem - Cabelo - Longo",
-      "valorServico": "200"
+      "tipoServico": "prancha - cabelo(curto)",
+      "valor": "30"
     }
   ],
-  "servico-realizado": [],
+  "servico-realizado": [
+    {
+      "servicos": [
+        {
+          "id": 1,
+          "tipoServico": "escova - cabelo(curto)",
+          "valor": 20
+        }
+      ],
+      "produtos": [
+        {
+          "id": 1,
+          "nomeProduto": "wella",
+          "tipoProduto": "Shampoo - 500ml",
+          "valor": 199
+        }
+      ],
+      "dataServicoRealizado": "2022-05-26",
+      "id": 1,
+      "cliente": {
+        "id": 1,
+        "nome": "Antonia Maria Lopes de Carvalho",
+        "telefone": "98148-0223",
+        "dataNascimento": "1987-02-05",
+        "eMail": "toynha5@hotmail.com",
+        "rua": "al",
+        "numero": "1871",
+        "bairro": "Itarare",
+        "complemento": "oeiras",
+        "cidade": "Teresina",
+        "estado": "PI"
+      },
+      "servico": null,
+      "produto": null,
+      "valor": 219
+    }
+  ],
   "despesa": [
     {
-      "dataPagamento": "2022-05-25",
+      "dataPagamento": "2022-05-26",
       "id": 1,
       "fornecedor": "Internet",
-      "valorPagoFornecedor": "99.00"
-    },
-    {
-      "dataPagamento": "2022-05-25",
-      "id": 2,
-      "fornecedor": "Agua",
-      "valorPagoFornecedor": "123"
+      "valor": "89.99"
     }
   ],
   "movimentacao-diaria": []

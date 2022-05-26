@@ -34,14 +34,14 @@ export class FormDespesaComponent implements OnInit {
       despesa => this.actionForSuccess(despesa),
       error => this.actionForError(error)
     );
-    console.log(despesa);
+    this.form.reset();
   }
 
   private initForm(){
     this.form = this.formBuilder.group({
       id: [null],
       fornecedor: [null, [Validators.required]],
-      valorPagoFornecedor: [null, [Validators.required]],
+      valor: [null, [Validators.required]],
       dataPagamento: [null, [Validators.required]],
     })
   }

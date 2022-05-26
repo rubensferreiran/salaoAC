@@ -41,6 +41,8 @@ export class FormServicoRealizadoComponent implements OnInit {
 
   produtosUltilizados: Produto[] = [];
 
+  todos!: number;
+
   constructor(
     private servicoRealizadoService: ServicoRealizadoService,
     private toastr: ToastrService,
@@ -63,7 +65,7 @@ export class FormServicoRealizadoComponent implements OnInit {
     })
   }
 
-  getProdutos(){
+  getProdutos() {
     this.produtoService.getAll().subscribe((produtos: Produto[]) => {
       this.produtos = produtos;
     })
@@ -75,23 +77,40 @@ export class FormServicoRealizadoComponent implements OnInit {
     })
   }
 
-  inserirProduto(){
+  inserirProduto() {
     let produtoSelecionado = this.form.controls['produto'].value;
     this.produtosUltilizados.push(produtoSelecionado);
     this.form.controls['produto'].reset();
+    this.calcularProdutosServicos();
   }
 
-  inserirServico(){
+  deletatProduto() {
+    let produtoSelecionado = this.form.controls['produto'].value;
+    this.produtosUltilizados.splice(produtoSelecionado, 1);
+  }
+
+  inserirServico() {
     let servicoSelecionado = this.form.controls['servico'].value;
     this.servicosUtilizados.push(servicoSelecionado);
     this.form.controls['servico'].reset();
+    this.calcularProdutosServicos();
   }
 
+  deletarServico() {
+    let produtoSelecionado = this.form.controls['produto'].value;
+    this.servicosUtilizados.splice(produtoSelecionado, 1);
+  }
+
+  calcularProdutosServicos(){
+    this.todos = (this.produtosUltilizados.reduce((produto, valor) => produto += valor.valor, 0) + this.servicosUtilizados.reduce((produto, valor) => produto += valor.valor, 0));
+    return this.todos;
+  }
 
   cadastraServicoRealiazado() {
     const servicoRealizado: ServicoRealizado = Object.assign(new ServicoRealizado(), this.form.value);
-    servicoRealizado.produtos = this.produtos;
-    servicoRealizado.servicos = this.servicos;
+    servicoRealizado.valor = this.todos;
+    servicoRealizado.produtos = this.produtosUltilizados;
+    servicoRealizado.servicos = this.servicosUtilizados;
     this.servicoRealizadoService.insert(servicoRealizado).subscribe(
       servicoRealizado => this.actionForSuccess(servicoRealizado),
       error => this.actionsForError(error)
@@ -105,7 +124,7 @@ export class FormServicoRealizadoComponent implements OnInit {
       cliente: [this.clienteSelecionado],
       servico: [this.servicoSelecionado],
       produto: [this.produtoSelecionado],
-      valorTotalServico: [null, [Validators.required]],
+      valor: [null, [Validators.required]],
       dataServicoRealizado: [null, [Validators.required]]
     });
   }

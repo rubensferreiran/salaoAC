@@ -42,7 +42,7 @@ export class FormServicoComponent implements OnInit {
     this.form = this.formBuilder.group({
       id: [null],
       tipoServico: [null, [Validators.required]],
-      valorServico: [null, [Validators.required]]
+      valor: [null, [Validators.required]]
     });
   }
   

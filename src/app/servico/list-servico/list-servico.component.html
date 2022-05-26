@@ -15,7 +15,7 @@
                     <tr *ngFor="let servico of servicos">
                         <td><span class="badge text-dark" style="width: 100%; text-align: center;">{{servico.tipoServico}}</span></td>
                         <td>
-                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{servico.valorServico | currency }}</span>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{servico.valor | currency }}</span>
                         </td>
                         <td><i (click)="removeSservico(servico)" style="cursor: pointer;" class="bi bi-trash text-danger"></i></td>
                     </tr>
