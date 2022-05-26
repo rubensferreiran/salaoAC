@@ -1,0 +1,30 @@
+<div id="listDespesa" class="container">
+    <div class="row">
+        <div class="col-12 col-md-12 mt-4">
+            <a [routerLink]="['/form-despesa']" class="btn btn-primary btn-sm">{{title}}</a>
+        </div>
+        <div class="responsive">
+            <table class="table mt-4 table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Fornecerdor:</th>
+                        <th scope="col" class="text-center">Valor Pago:</th>
+                        <th scope="col" class="text-center">Data Pagamento:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let despesa of despesas">
+                        <td><span class="badge text-dark" style="width: 100%; text-align: center;">{{despesa.fornecedor}}</span></td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{despesa.valorPagoFornecedor | currency}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{despesa.dataPagamento | date: "dd/MM/YYYY"}}</span>
+                        </td>
+                        <td><i style="cursor: pointer;" class="bi bi-trash text-danger"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

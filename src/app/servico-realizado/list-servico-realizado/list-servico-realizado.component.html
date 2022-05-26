@@ -1,0 +1,60 @@
+<div id="listServicoRealizado" class="container">
+    <div class="row">
+        <div class="col-12 col-md-12 mt-4">
+            <a [routerLink]="['/form-servico-realizado']" class="btn btn-primary btn-sm">{{titlePage}}</a>
+        </div>
+        <div class="responsive">
+            <table class="table mt-4 table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Cliente:</th>
+                        <th scope="col" class="text-center">Tipo de Serviço:</th>
+                        <th scope="col" class="text-center">Produto:</th>
+                        <th scope="col" class="text-center">Valor Total:</th>
+                        <th scope="col" class="text-center">Data do Serviço:</th>
+                        <th scope="col" class="text-center"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let servicoRealizado of servicosRealizados">
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{servicoRealizado.cliente.nome}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">
+                                <ul style="text-align: left; margin-top: -5px;"
+                                    *ngFor="let servico of servicoRealizado.servicos">
+                                    <li style="list-style: none;">{{servico.tipoServico}} | {{servico.valorServico |
+                                        currency}}</li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">
+                                <ul style="text-align: left; margin-top: -5px;"
+                                    *ngFor="let produto of servicoRealizado.produtos">
+                                    <li style="list-style: none;">{{produto.nomeProduto}} | {{produto.valorProduto|
+                                        currency}}</li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{servicoRealizado.valorTotalServico |
+                                currency}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{servicoRealizado.dataServicoRealizado | date:
+                                "dd/MM/YYYY"}}</span>
+                        </td>
+                        <td><i (click)="removeServicoRealizado(servicoRealizado)" style="cursor: pointer;"
+                                class="bi bi-trash text-danger"></i></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

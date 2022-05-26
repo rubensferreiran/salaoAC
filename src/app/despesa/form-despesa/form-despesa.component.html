@@ -1,0 +1,23 @@
+<div id="formCard" class="card">
+    <div class="car-body">
+        <h4>{{titlePage}}</h4>
+    </div>
+    <form [formGroup]="form" id="formCliente" class="row">
+        <div class="mb-3 col-12 col-md-12">
+            <label for="fornecedor" class="form-label">Fornecedor:</label>
+            <input type="text" class="form-control" id="fornecedor" formControlName="fornecedor">
+        </div>
+        <div class="mb-3 col-12 col-md-12">
+            <label for="valorPagoFornecedor" class="form-label">Valor Pago:</label>
+            <input type="number" class="form-control" id="valorPagoFornecedor" formControlName="valorPagoFornecedor">
+        </div>
+        <div class="mb-3 col-12 col-md-12">
+            <label for="dataPagamento" class="form-label">Data Pagamneto:</label>
+            <input type="date" class="form-control" id="dataPagamento" formControlName="dataPagamento">
+        </div>
+        <div class="col-12 col-md-12 d-flex justify-content-end">
+            <button (click)="cadastrarDespesa()" type="submit" class="btn btn-primary"
+                style="width: auto;">Gravar</button>
+        </div>
+    </form>
+</div>

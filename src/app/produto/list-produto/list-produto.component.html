@@ -1,0 +1,30 @@
+<div id="listProduto" class="container">
+    <div class="row">
+        <div class="col-12 col-md-12 mt-4">
+            <a [routerLink]="['/form-produto']" class="btn btn-primary btn-sm">{{title}}</a>
+        </div>
+        <div class="responsive">
+            <table class="table mt-4 table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Nome Produto</th>
+                        <th scope="col" class="text-center">Tipo de Produto</th>
+                        <th scope="col" class="text-center">Valor do Produto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let produto of produtos">
+                        <td><span class="badge text-dark" style="width: 100%; text-align: center;">{{produto.nomeProduto}}</span></td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{produto.tipoProduto}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{produto.valorProduto | currency }}</span>
+                        </td>
+                        <td><i (click)="removeProduto(produto)" style="cursor: pointer;" class="bi bi-trash text-danger"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

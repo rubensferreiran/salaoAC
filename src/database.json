@@ -1,0 +1,72 @@
+{
+  "cliente": [
+    {
+      "id": 1,
+      "nome": "Antonia Maria Lopes de Carvalho",
+      "telefone": "98148-0223",
+      "dataNascimento": "1987-02-05",
+      "eMail": "toynha5@hotmail.com",
+      "rua": "al",
+      "numero": "1871",
+      "bairro": "Itarare",
+      "complemento": "oeiras",
+      "cidade": "Teresina",
+      "estado": "PI"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Rariane",
+      "telefone": "86 90000-1122",
+      "dataNascimento": "1993-04-05",
+      "eMail": "rariane@gmail.com",
+      "rua": "cedral",
+      "numero": "4765",
+      "bairro": "novo horizonte",
+      "complemento": "marreiros",
+      "cidade": "Teresina",
+      "estado": "pi"
+    }
+  ],
+  "produto": [
+    {
+      "id": 1,
+      "nomeProduto": "Inoar ",
+      "tipoProduto": "Shampoo",
+      "valorProduto": "79.99"
+    },
+    {
+      "id": 2,
+      "nomeProduto": "Inoar",
+      "tipoProduto": "Condicionador - 300ml",
+      "valorProduto": "69.90"
+    }
+  ],
+  "servico": [
+    {
+      "id": 1,
+      "tipoServico": "Escova - Cabelo - Curto",
+      "valorServico": "35.00"
+    },
+    {
+      "id": 2,
+      "tipoServico": "Selagem - Cabelo - Longo",
+      "valorServico": "200"
+    }
+  ],
+  "servico-realizado": [],
+  "despesa": [
+    {
+      "dataPagamento": "2022-05-25",
+      "id": 1,
+      "fornecedor": "Internet",
+      "valorPagoFornecedor": "99.00"
+    },
+    {
+      "dataPagamento": "2022-05-25",
+      "id": 2,
+      "fornecedor": "Agua",
+      "valorPagoFornecedor": "123"
+    }
+  ],
+  "movimentacao-diaria": []
+}

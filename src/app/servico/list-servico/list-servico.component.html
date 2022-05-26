@@ -1,0 +1,26 @@
+<div id="listServico" class="container">
+    <div class="row">
+        <div class="col-12 col-md-12 mt-4">
+            <a [routerLink]="['/form-servico']" class="btn btn-primary btn-sm">{{title}}</a>
+        </div>
+        <div class="responsive">
+            <table class="table mt-4 table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Tipo de Serviço:</th>
+                        <th scope="col" class="text-center">Valor do Serviço:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let servico of servicos">
+                        <td><span class="badge text-dark" style="width: 100%; text-align: center;">{{servico.tipoServico}}</span></td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{servico.valorServico | currency }}</span>
+                        </td>
+                        <td><i (click)="removeSservico(servico)" style="cursor: pointer;" class="bi bi-trash text-danger"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

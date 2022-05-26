@@ -1,0 +1,36 @@
+<div id="listCliente" class="container">
+    <div class="row">
+        <div class="col-12 col-md-12 mt-4">
+            <a [routerLink]="['/form-cliente']" class="btn btn-primary btn-sm">{{titlePage}}</a>
+        </div>
+        <div class="responsive">
+            <table class="table mt-4 table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Nome</th>
+                        <th scope="col" class="text-center">Telefone</th>
+                        <th scope="col" class="text-center">E-mail</th>
+                        <th scope="col" class="text-center">Data de Aniversário</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cliente of clientes">
+                        <td><span class="badge text-dark" style="width: 100%; text-align: center;">{{cliente.nome}}</span></td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{cliente.telefone}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{cliente.eMail}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{cliente.dataNascimento | date: "dd/MM/YYYY"}}</span>
+                        </td>
+                        
+                        <td><i (click)="removeCliente(cliente)" style="cursor: pointer;" class="bi bi-trash text-danger"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

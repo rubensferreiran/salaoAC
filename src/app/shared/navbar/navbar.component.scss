@@ -1,0 +1,56 @@
+nav {
+    background: rgba($color: #000000, $alpha: 1.0);
+    background: linear-gradient(175deg, rgb(227, 185, 237) 5%, rgb(246, 174, 253) 35%, rgb(241, 193, 247) 75%);
+    border: none;
+    position: fixed;
+    margin-left: 310px;
+
+    img {
+        width: 170px;
+        height: 85px;
+        position: absolute;
+        margin-left: -70px;
+        margin-top: -45px;
+        animation: mymove 4s both;
+        animation-delay: 1s;
+    }
+
+    @keyframes mymove {
+        from {
+            left: -300px;
+        }
+
+        to {
+            left: 10px;
+        }
+    }
+
+
+    .textLogo {
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    ul {
+        margin-left: 68px;
+
+        li {
+            margin-left: 20px;
+
+            a {
+                color: rgb(255, 255, 255);
+                font-weight: 400;
+                border-radius: 20px;
+
+            }
+
+            a:hover {
+                font-weight: 500;
+                width: auto;
+                background-color: rgba(174, 93, 179, 0.809);
+                border-radius: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+<div id="formCard" class="card">
+  <div class="car-body">
+    <h4>{{titleCard}}</h4>
+  </div>
+  <form id="formCliente" [formGroup]="form" class="row">
+    <div class="mb-3 col-12 col-md-12">
+      <label for="nome" class="form-label">Nome:</label>
+      <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" formControlName="nome">
+    </div>
+    <div class="mb-3 col-12 col-md-6">
+      <label for="telefone" class="form-label">Telefone:</label>
+      <input type="tel" class="form-control" id="telefone" formControlName="telefone">
+    </div>
+    <div class="mb-3 col-12 col-md-6">
+      <label for="dataDeNascimento" class="form-label">Data de nascimento:</label>
+      <input type="date" class="form-control" id="dataDeNascimento" formControlName="dataNascimento">
+    </div>
+    <div class="mb-3 col-12 col-md-12">
+      <label for="email" class="form-label">E-mail:</label>
+      <input type="email" class="form-control" id="email" formControlName="eMail">
+    </div>
+    <div class="mb-3 col-12 col-md-6">
+      <label for="rua" class="form-label">Rua:</label>
+      <input type="text" class="form-control" id="rua" formControlName="rua">
+    </div>
+    <div class="mb-3 col-12 col-md-2">
+      <label for="numero" class="form-label">Número:</label>
+      <input type="text" class="form-control" id="numero" formControlName="numero">
+    </div>
+    <div class="mb-3 col-12 col-md-4">
+      <label for="bairro" class="form-label">Bairro:</label>
+      <input type="text" class="form-control" id="bairro" formControlName="bairro">
+    </div>
+    <div class="mb-3 col-12 col-md-5">
+      <label for="complemento" class="form-label">Complemento:</label>
+      <input type="text" class="form-control" id="complemento" formControlName="complemento">
+    </div>
+    <div class="mb-3 col-12 col-md-5">
+      <label for="cidade" class="form-label">Cidade:</label>
+      <input type="text" class="form-control" id="cidade" formControlName="cidade">
+    </div>
+    <div class="mb-3 col-12 col-md-2">
+      <label for="estado" class="form-label">Estado:</label>
+      <input type="text" class="form-control" id="text" formControlName="estado">
+    </div>
+    <div class="col-12 col-md-12 d-flex justify-content-end">
+      <button type="submit" class="btn btn-primary" style="width: auto;" (click)="cadastrarCliente()">Gravar</button>
+    </div>
+  </form>
+</div>

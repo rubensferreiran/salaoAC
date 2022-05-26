@@ -1,0 +1,71 @@
+<div id="formCard" class="card">
+    <div class="car-body">
+        <h4 class="text-center">{{titlePage}}</h4>
+    </div>
+    <form id="formCliente" [formGroup]="form" class="row">
+        <div class="mb-3 col-12 col-md-12">
+            <label for="cliente" class="form-label">Cliente:</label>
+            <select id="cliente" class="form-select" formControlName="cliente" [(ngModel)]="clienteSelecionado">
+                <option *ngFor="let cliente of clientes" [ngValue]="cliente">{{cliente.nome}}</option>
+            </select>
+        </div>
+        <div class="mb-3 col-12 col-md-6">
+            <label for="servico" class="form-label">Serviço:</label>
+            <select id="servico" class="form-select input-group" formControlName="servico"
+                [(ngModel)]="servicoSelecionado">
+                <option *ngFor="let servico of servicos" [ngValue]="servico">{{servico.tipoServico}}</option>
+            </select>
+            <button (click)="inserirServico()" class="btn btn-primary" type="button" id="button-addon2">+</button>
+            <table class="table mt-4 table-striped table-hover">
+                <tbody>
+                    <tr *ngFor="let servico of servicosUtilizados">
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{servico.tipoServico}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{servico.valorServico | currency}}</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mb-3 col-12 col-md-6">
+            <label for="produto" class="form-label">Produto:</label>
+            <select id="produto" class="form-select" formControlName="produto" [(ngModel)]="produtoSelecionado">
+                <option *ngFor="let produto of produtos" [ngValue]="produto">
+                    {{produto.nomeProduto}}&nbsp;{{produto.tipoProduto}}</option>
+            </select>
+            <button (click)="inserirProduto()" class="btn btn-primary" type="button" id="button-addon2">+</button>
+            <table class="table mt-4 table-striped table-hover">
+                <tbody>
+                    <tr *ngFor="let produto of produtosUltilizados">
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{produto.nomeProduto}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{produto.valorProduto | currency}}</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mb-3 col-12 col-md-6">
+            <label for="valorTotalServico" class="form-label">Valor Total:</label>
+            <input type="text" class="form-control" id="valorTotalServico" formControlName="valorTotalServico">
+        </div>
+        <div class="mb-3 col-12 col-md-6">
+            <label for="dataServicoRealizado" class="form-label">Data:</label>
+            <input type="date" class="form-control" id="dataServicoRealizado" formControlName="dataServicoRealizado">
+        </div>
+        <div class="col-12 col-md-12 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary" style="width: auto;"
+                (click)="cadastraServicoRealiazado()">Gravar</button>
+        </div>
+    </form>
+</div>
