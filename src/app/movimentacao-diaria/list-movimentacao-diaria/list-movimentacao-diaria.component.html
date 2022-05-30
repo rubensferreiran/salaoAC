@@ -1,1 +1,69 @@
-<p>list-movimentacao-diaria works!</p>
+<!-- <div id="listMovimentacao" class="container">
+    <div class="row">
+        <div class="responsive">
+            <table class="table mt-4 table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Cliente:</th>
+                        <th scope="col" class="text-center">Data:</th>
+                        <th scope="col" class="text-center">Valor:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let servico of servicosRealizados">
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{servico.cliente.nome}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{servico.dataServicoRealizado
+                                | date: "dd/MM/YYYY"}}
+                            </span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{servico.valor |
+                                currency}}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Fornecedor:</th>
+                        <th scope="col" class="text-center">Data:</th>
+                        <th scope="col" class="text-center">Valor:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let despesa of despesas">
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{despesa.fornecedor}}</span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark"
+                                style="width: 100%; text-align: center;">{{despesa.dataPagamento
+                                | date: "dd/MM/YYYY"}}
+                            </span>
+                        </td>
+                        <td>
+                            <span class="badge text-dark" style="width: 100%; text-align: center;">{{despesa.valor |
+                                currency}}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Total:</th>
+                        <th scope="col" class="text-center"></th>
+                        <th scope="col" class="text-center"><span class="badge text-dark" style="width: 100%; text-align: center;"
+                            [innerText]="caixaTotal() | currency">
+                        </span></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div> -->

@@ -101,9 +101,16 @@ export class FormServicoRealizadoComponent implements OnInit {
     this.servicosUtilizados.splice(produtoSelecionado, 1);
   }
 
-  calcularProdutosServicos(){
-    this.todos = (this.produtosUltilizados.reduce((produto, valor) => produto += valor.valor, 0) + this.servicosUtilizados.reduce((produto, valor) => produto += valor.valor, 0));
+  calcularProdutosServicos() {
+    this.todos = (this.produtosUltilizados.reduce((soma, produto) => soma += produto.valor, 0) + this.servicosUtilizados.reduce((soma, produto) => soma += produto.valor, 0));
     return this.todos;
+    // let produtos = this.produtosUltilizados.reduce((soma, produto) => {
+    //   return soma + produto.valor
+    // }, 0);
+    // let servico = this.servicosUtilizados.reduce((soma, produto) => {
+    //   return soma + produto.valor
+    // }, 0);
+    // return this.todos = produtos + servico;
   }
 
   cadastraServicoRealiazado() {

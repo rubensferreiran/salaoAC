@@ -44,7 +44,7 @@ export class DespesaService {
     );
   }
 
-  public delete(despesa: any): Observable<any>{
+  public delete(despesa: number): Observable<any>{
     let url = `${this.apiPath}/${despesa}`;
     return this._http.delete(url).pipe(
       catchError(this.handleError),

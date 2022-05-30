@@ -44,9 +44,9 @@ export class ServicoService {
     );
   }
 
-  public delete(id: any):Observable<any> {
+  public delete(id: number):Observable<any> {
     const url = `${this.apiPath}/ ${id}`;
-    return this.delete(url).pipe(
+    return this._http.delete(url).pipe(
       catchError(this.handleaerror),
       map(() => null)
     );
