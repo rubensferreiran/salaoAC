@@ -86,6 +86,87 @@
       "servico": null,
       "produto": null,
       "valor": 149
+    },
+    {
+      "servicos": [
+        {
+          "id": 1,
+          "tipoServico": "escova",
+          "valor": 30
+        },
+        {
+          "id": 2,
+          "tipoServico": "chapinha",
+          "valor": 30
+        }
+      ],
+      "produtos": [
+        {
+          "id": 2,
+          "nomeProduto": "Wella",
+          "tipoProduto": "condicionador - 500ml",
+          "valor": 65
+        }
+      ],
+      "dataServicoRealizado": "2022-05-30",
+      "id": 2,
+      "cliente": {
+        "id": 1,
+        "nome": "Rubens Ferreira Nogueira",
+        "telefone": "(86)9995-69060",
+        "dataNascimento": "1990-10-16",
+        "eMail": "rubensferreiranogueira@gmail.com",
+        "rua": "Albania",
+        "numero": "1212",
+        "bairro": "marreiros",
+        "complemento": "oeiras",
+        "cidade": "Teresina",
+        "estado": "PI"
+      },
+      "servico": null,
+      "produto": null,
+      "valor": 125
+    },
+    {
+      "servicos": [
+        {
+          "id": 2,
+          "tipoServico": "chapinha",
+          "valor": 30
+        }
+      ],
+      "produtos": [
+        {
+          "id": 1,
+          "nomeProduto": "Wella",
+          "tipoProduto": "shampoo - 500ml",
+          "valor": 24
+        },
+        {
+          "id": 1,
+          "nomeProduto": "Wella",
+          "tipoProduto": "shampoo - 500ml",
+          "valor": 24
+        }
+      ],
+      "dataServicoRealizado": "2022-05-16",
+      "id": 3,
+      "cliente": {
+        "id": 1,
+        "nome": "Rubens Ferreira Nogueira",
+        "telefone": "(86)9995-69060",
+        "dataNascimento": "1990-10-16",
+        "eMail": "rubensferreiranogueira@gmail.com",
+        "rua": "Albania",
+        "numero": "1212",
+        "bairro": "marreiros",
+        "complemento": "oeiras",
+        "cidade": "Teresina",
+        "estado": "PI"
+      },
+      "servico": null,
+      "produto": null,
+      "valor": 78
     }
   ],
   "despesa": [

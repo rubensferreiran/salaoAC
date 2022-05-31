@@ -87,6 +87,8 @@ export class FormServicoRealizadoComponent implements OnInit {
   deletatProduto() {
     let produtoSelecionado = this.form.controls['produto'].value;
     this.produtosUltilizados.splice(produtoSelecionado, 1);
+    this.calcularProdutosServicos();
+
   }
 
   inserirServico() {
@@ -99,6 +101,8 @@ export class FormServicoRealizadoComponent implements OnInit {
   deletarServico() {
     let produtoSelecionado = this.form.controls['produto'].value;
     this.servicosUtilizados.splice(produtoSelecionado, 1);
+    this.calcularProdutosServicos();
+
   }
 
   calcularProdutosServicos() {
